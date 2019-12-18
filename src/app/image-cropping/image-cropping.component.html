@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="file">
+      <input type="file" (change)="fileChangeEvent($event)" />
+  </div>
+  <div class="crop"> <h5>Crop Image</h5></div>
+   <image-cropper 
+   [imageChangedEvent]="profileChangedEvent" 
+   [maintainAspectRatio]="true" 
+   [aspectRatio]="4 / 4"
+   [resizeToWidth]="256" 
+   (imageCropped)="imageCropped($event)">
+  </image-cropper>
+<div class="preview"> 
+  <h5>Preview</h5>
+  <img [src]="Blob">
+</div>
+</div>
